@@ -27,10 +27,10 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.html">Home</a>
         </li>
-        <li><a class="nav-link" href="Pages/shop.html">Shop</a></li>
-        <li><a class="nav-link" href="Pages/about">About us</a></li>
-        <li><a class="nav-link" href="Pages/services.html">Services</a></li>
-        <li><a class="nav-link" href="Pages/blog.html">Blog</a></li>
+        <li><a class="nav-link" href="shop.html">Shop</a></li>
+        <li><a class="nav-link" href="about.jsp">About us</a></li>
+        <li><a class="nav-link" href="services.html">Services</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
         <li><a class="nav-link" href="contact.html">Contact us</a></li>
       </ul>
 
