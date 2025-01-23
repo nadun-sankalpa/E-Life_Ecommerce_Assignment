@@ -242,7 +242,7 @@
                 </li>
             </ul>
             <div class="collection-tools" id="navbar-tools">
-                <a class="cart-link" href="#">
+                <a class="cart-link" href="Cart.jsp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
                     </svg>
@@ -457,7 +457,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Navy Headphones</h1>
-                        <p>$87.99</p>
+                        <p>RS.5000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -471,8 +471,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Turquoise Laptop</h1>
-                        <p>$249.99</p>
+                        <h1>Lenovo Ideapad 3</h1>
+                        <p>Rs.248 000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -486,8 +486,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Skyblue Phone</h1>
-                        <p>$149.99</p>
+                        <h1>Iphone 13 Pro</h1>
+                        <p>Rs.185 000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -501,8 +501,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Lead Tablet</h1>
-                        <p>$120.99</p>
+                        <h1>Samsung S6 Tablet</h1>
+                        <p>Rs.196 000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -517,7 +517,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Golden Headphones</h1>
-                        <p>$130.99</p>
+                        <p>Rs.8500</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -531,8 +531,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Fire Laptop</h1>
-                        <p>$219.99</p>
+                        <h1>Acer Laptop</h1>
+                        <p>Rs.154 000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -672,7 +672,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Navy Headphones</h1>
-                        <p>$87.99</p>
+                        <p>Rs.5000</p>
                         <button class="blue-button">
                             Add To Cart
                         </button>
@@ -687,7 +687,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>White Headphones</h1>
-                        <p>$109.99</p>
+                        <p>Rs.4500</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -700,7 +700,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Candy Headphones</h1>
-                        <p>$88.99</p>
+                        <p>RS.10750</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -713,7 +713,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Mauve Headphones</h1>
-                        <p>$95.99</p>
+                        <p>Rs.8999</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -726,7 +726,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Black Headphones</h1>
-                        <p>$72.99</p>
+                        <p>Rs14500</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -739,7 +739,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Golden Headphones</h1>
-                        <p>$130.99</p>
+                        <p>Rs.8500</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -886,7 +886,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Floss Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>Rs.6500</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -899,7 +899,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Water Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>Rs.9800</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -912,7 +912,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Peach Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>Rs.3650</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -925,7 +925,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Bear Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>Rs.1520</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -938,7 +938,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Beige Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>RS.2500</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -951,7 +951,7 @@
                     </div>
                     <div class="product-text-container">
                         <h1>Creamy Smartwatch</h1>
-                        <p>$99.99</p>
+                        <p>Rs.3000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1075,8 +1075,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Sandy Phone</h1>
-                        <p>$135.99</p>
+                        <h1>Iphone 15 ProMax</h1>
+                        <p>Rs.419 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1088,8 +1088,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Candyfloss Phone</h1>
-                        <p>$129.99</p>
+                        <h1>Iphone 15</h1>
+                        <p>RS.385 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1101,8 +1101,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Skyblue Phone</h1>
-                        <p>$149.99</p>
+                        <h1>Iphone 14 Pro</h1>
+                        <p>Rs.320 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1114,8 +1114,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Mauve Phone</h1>
-                        <p>$189.99</p>
+                        <h1>Iphone 14</h1>
+                        <p>RS.305 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1127,8 +1127,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Minty Phone</h1>
-                        <p>$100.99</p>
+                        <h1>Vivo V21e</h1>
+                        <p>Rs.125 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1140,8 +1140,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Sunrise Phone</h1>
-                        <p>$91.99</p>
+                        <h1>Redmi Note 12 Pro</h1>
+                        <p>Rs.80 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1287,8 +1287,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Lead Tablet</h1>
-                        <p>$120.99</p>
+                        <h1>Samsung S6 Tablet</h1>
+                        <p>Rs.138 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1300,8 +1300,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Sandy Tablet</h1>
-                        <p>$119.99</p>
+                        <h1>Samsung S9 Tablet</h1>
+                        <p>Rs.156 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1313,8 +1313,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Lilac Tablet</h1>
-                        <p>$135.99</p>
+                        <h1>Samsung S12 Tablet</h1>
+                        <p>Rs.165 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1326,8 +1326,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Natural Tablet</h1>
-                        <p>$109.99</p>
+                        <h1>Lenovo Smart Tablet</h1>
+                        <p>Rs.65 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1339,8 +1339,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Navy Tablet</h1>
-                        <p>$114.99</p>
+                        <h1>Lenovo Asper Tablet</h1>
+                        <p>Rs.90 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1352,8 +1352,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Silver Tablet</h1>
-                        <p>$139.99</p>
+                        <h1>Huawei Blaze Tablet</h1>
+                        <p>Rs.80 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1477,8 +1477,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Sapphire Laptop</h1>
-                        <p>$209.99</p>
+                        <h1>Asus VivoBook Laptop</h1>
+                        <p>Rs.250 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1490,8 +1490,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Fire Laptop</h1>
-                        <p>$219.99</p>
+                        <h1>Lenovo Ideapad 3 </h1>
+                        <p>Rs.165 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1503,8 +1503,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Turquoise Laptop</h1>
-                        <p>$249.99</p>
+                        <h1>Acer Aspire Laptop</h1>
+                        <p>Rs.220 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1516,8 +1516,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Smokey Laptop</h1>
-                        <p>$264.99</p>
+                        <h1>Mackbook 3 Laptop</h1>
+                        <p>Rs.325 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1529,8 +1529,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Harmony Laptop</h1>
-                        <p>$237.99</p>
+                        <h1>Macbook 4 Laptop</h1>
+                        <p>Rs.400 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
@@ -1542,8 +1542,8 @@
                         </button>
                     </div>
                     <div class="product-text-container">
-                        <h1>Chromatic Laptop</h1>
-                        <p>$199.99</p>
+                        <h1>Asus ZenBook Laptop</h1>
+                        <p>Rs.565 000</p>
                         <button class="blue-button">Add To Cart</button>
                     </div>
                 </li>
