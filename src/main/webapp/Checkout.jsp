@@ -2,13 +2,13 @@
   Created by IntelliJ IDEA.
   User: nadun
   Date: 1/23/2025
-  Time: 1:43 PM
+  Time: 4:57 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Shopping Cart</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -45,71 +45,51 @@
     </div>
 </nav>
 <div class="container mt-5">
-    <h2>Your Shopping Cart</h2>
-
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Product Image</th>
-            <th>Product Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><img src="product1.jpg" alt="Product 1" width="50"></td>
-            <td>Product Name 1</td>
-            <td><input type="number" min="1" value="1" style="width: 50px;"></td>
-            <td>$199.99</td>
-            <td id="total1">$199.99</td>
-            <td><button class="btn btn-danger btn-sm">Remove</button></td>
-        </tr>
-        <tr>
-            <td><img src="product2.jpg" alt="Product 2" width="50"></td>
-            <td>Product Name 2</td>
-            <td><input type="number" min="1" value="2" style="width: 50px;"></td>
-            <td>$99.99</td>
-            <td id="total2">$199.98</td>
-            <td><button class="btn btn-danger btn-sm">Remove</button></td>
-        </tr>
-        </tbody>
-    </table>
-
-    <p><strong>Total:</strong> <span id="grandTotal">$399.97</span></p>
-
-    <button class="btn btn-primary">Proceed to Checkout</button>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="mb-4">Order Summary</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Product 1</td>
+                    <td>1</td>
+                    <td>$10.00</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Product 2</td>
+                    <td>2</td>
+                    <td>$15.00</td>
+                    <td>$30.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h3 class="mb-4">Checkout Summary</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Order ID: <span id="orderId"></span></li>
+                <li class="list-group-item">User: <span id="userId"></span></li>
+                <li class="list-group-item">Date: <span id="orderDate"></span></li>
+                <li class="list-group-item">Status: <span id="orderStatus"></span></li>
+                <li class="list-group-item">Total: <span id="orderTotal">$0.00</span></li>
+            </ul>
+            <button type="button" class="btn btn-primary mt-3">Place Order</button>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    // Update total on quantity change
-    $('input[type="number"]').on('change', function() {
-        var row = $(this).closest('tr');
-        var price = parseFloat(row.find('td:nth-child(4)').text().replace('$', ''));
-        var quantity = parseInt($(this).val());
-        var total = price * quantity;
-        row.find('td:nth-child(5)').text('$' + total.toFixed(2));
-        updateGrandTotal();
-    });
-
-    function updateGrandTotal() {
-        var grandTotal = 0;
-        $('td:nth-child(5)').each(function() {
-            grandTotal += parseFloat($(this).text().replace('$', ''));
-        });
-        $('#grandTotal').text('$' + grandTotal.toFixed(2));
-    }
-
-
-    updateGrandTotal();
-</script>
-
 
 </body>
 </html>

@@ -211,7 +211,7 @@
 <nav>
     <div id="navbar">
         <div id="navbar-logo">
-            <img src="images/eLife.png" alt="eLife, Company Ecommerce Logo">
+            <img src="images/logo2.png" width="250" height="70">
         </div>
         <div id="menu-bar">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -231,14 +231,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Services
-                    </a>
+                    <a href="Checkout.jsp">Checkout</a>
                 </li>
                 <li>
-                    <a href="#">
-                        About
-                    </a>
+                    <a href="User.jsp">User</a>
                 </li>
             </ul>
             <div class="collection-tools" id="navbar-tools">

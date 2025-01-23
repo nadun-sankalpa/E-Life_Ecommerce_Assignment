@@ -26,7 +26,7 @@
 <nav>
   <div id="navbar">
     <div id="navbar-logo">
-      <img src="images/eLife.png" width="140" height="70">
+      <img src="images/logo2.png" width="180" height="70">
     </div>
     <div id="navbar-links">
       <ul>
@@ -37,10 +37,13 @@
           <a href="products.jsp">Products</a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="Cart.jsp">Cart</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="Checkout.jsp">Checkout</a>
+        </li>
+        <li>
+          <a href="User.jsp">User</a>
         </li>
       </ul>
       <button class="blue-button">
