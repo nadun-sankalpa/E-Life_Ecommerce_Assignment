@@ -54,5 +54,5 @@ public class User {
         ADMIN, CUSTOMER
     }
 
-    // Getters and setters...
+
 }

@@ -5,527 +5,267 @@
   <meta name="keywords" content="bootstrap, bootstrap4" />
   <link rel="shortcut icon" href="favicon.png">
   <!-- Bootstrap CSS -->
-  <link href="CSS/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="CSS/tiny-slider.css" rel="stylesheet">
-  <link href="CSS/style.css" rel="stylesheet">
-  <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+  <link href="CSS/styles/homepage/styles.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('scroll', () => {
+        let navBar = document.querySelector('nav');
+        if (window.scrollY > 0) {
+          navBar.style.background = 'white';
+          navBar.style.boxShadow = '0 5px 20px rgba(190, 190, 190, 0.15)'
+        }
+        else {
+          navBar.style.background = 'transparent';
+          navBar.style.boxShadow = 'none'
+        }
+      })
+    })
+  </script>
 </head>
 <body>
-<!-- Start Header/Navigation -->
-<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsFurni">
-      <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
+<nav>
+  <div id="navbar">
+    <div id="navbar-logo">
+      <img src="images/eLife.png" width="140" height="70">
+    </div>
+    <div id="navbar-links">
+      <ul>
+        <li>
+          <a href="index.jsp">Home</a>
         </li>
-        <li><a class="nav-link" href="shop.html">Shop</a></li>
-        <li><a class="nav-link" href="about.jsp">About us</a></li>
-        <li><a class="nav-link" href="services.html">Services</a></li>
-        <li><a class="nav-link" href="blog.html">Blog</a></li>
-        <li><a class="nav-link" href="contact.html">Contact us</a></li>
+        <li>
+          <a href="products.jsp">Products</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
       </ul>
-
-      <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-        <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-        <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-      </ul>
+      <button class="blue-button">
+        Shop Now
+      </button>
     </div>
   </div>
-
 </nav>
-<!-- End Header/Navigation -->
 
-<!-- Start Hero Section -->
-<div class="hero">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-5">
-        <div class="intro-excerpt">
-          <h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
-          <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-          <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <div class="hero-img-wrap">
-          <img src="images/couch.png" class="img-fluid">
-        </div>
-      </div>
+
+<!-- TOP -->
+<div id="home-top-container">
+  <div id="home-top-wrapper">
+    <div id="home-top-text">
+      <h1>
+        Track Your Steps With Quality Smartwatch
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pellentesque, ante vitae cursus elementum, lectus sapien auctor tortor,
+        quis pharetra ligula sapien eu augue.
+      </p>
+      <button class="blue-button">
+        See Collection
+      </button>
+    </div>
+    <div id="home-top-image">
+      <img src="images/topwatch.png" alt="Large Blue Smartwatch">
     </div>
   </div>
 </div>
-<!-- End Hero Section -->
 
-<!-- Start Product Section -->
-<div class="product-section">
-  <div class="container">
-    <div class="row">
-
-      <!-- Start Column 1 -->
-      <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-        <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-        <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-        <p><a href="shop.html" class="btn">Explore</a></p>
+<!-- OUR COLLECTION/ TYPES OF PRODUCTS SELLING -->
+<div id="collection-container">
+  <h1>Our Collection</h1>
+  <div id="collection-items-wrapper">
+    <div class="collection-item">
+      <div class="collection-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+          <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+        </svg>
       </div>
-      <!-- End Column 1 -->
-
-      <!-- Start Column 2 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="images/product-1.png" class="img-fluid product-thumbnail">
-          <h3 class="product-title">Nordic Chair</h3>
-          <strong class="product-price">$50.00</strong>
-
-          <span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-        </a>
+      <span class="collection-name">
+                        Headphone
+                    </span>
+    </div>
+    <div class="collection-item">
+      <div class="collection-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+          <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+        </svg>
       </div>
-      <!-- End Column 2 -->
-
-      <!-- Start Column 3 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="images/product-2.png" class="img-fluid product-thumbnail">
-          <h3 class="product-title">Kruzo Aero Chair</h3>
-          <strong class="product-price">$78.00</strong>
-
-          <span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-        </a>
+      <span class="collection-name">
+                        Phone
+                    </span>
+    </div>
+    <div class="collection-item">
+      <div class="collection-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"fill="currentColor" class="bi bi-smartwatch" viewBox="0 0 16 16">
+          <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z"/>
+          <path d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3"/>
+        </svg>
       </div>
-      <!-- End Column 3 -->
-
-      <!-- Start Column 4 -->
-      <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-        <a class="product-item" href="cart.html">
-          <img src="images/product-3.png" class="img-fluid product-thumbnail">
-          <h3 class="product-title">Ergonomic Chair</h3>
-          <strong class="product-price">$43.00</strong>
-
-          <span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-        </a>
+      <span class="collection-name">
+                        Smartwatch
+                    </span>
+    </div>
+    <div class="collection-item">
+      <div class="collection-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-tablet-landscape" viewBox="0 0 16 16">
+          <path d="M1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm-1 8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2z"/>
+          <path d="M14 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0"/>
+        </svg>
       </div>
-      <!-- End Column 4 -->
-
+      <span class="collection-name">
+                        Tablet
+                    </span>
+    </div>
+    <div class="collection-item">
+      <div class="collection-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+          <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
+        </svg>
+      </div>
+      <span class="collection-name">
+                        PC
+                    </span>
     </div>
   </div>
-</div>
-<!-- End Product Section -->
+</div> <!-- END OF PRODUCT COLLECTION-->
 
-<!-- Start Why Choose Us Section -->
-<div class="why-choose-section">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-6">
-        <h2 class="section-title">Why Choose Us</h2>
-        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-
-        <div class="row my-5">
-          <div class="col-6 col-md-6">
-            <div class="feature">
-              <div class="icon">
-                <img src="images/truck.svg" alt="Image" class="imf-fluid">
-              </div>
-              <h3>Fast &amp; Free Shipping</h3>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-6">
-            <div class="feature">
-              <div class="icon">
-                <img src="images/bag.svg" alt="Image" class="imf-fluid">
-              </div>
-              <h3>Easy to Shop</h3>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-6">
-            <div class="feature">
-              <div class="icon">
-                <img src="images/support.svg" alt="Image" class="imf-fluid">
-              </div>
-              <h3>24/7 Support</h3>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-6">
-            <div class="feature">
-              <div class="icon">
-                <img src="images/return.svg" alt="Image" class="imf-fluid">
-              </div>
-              <h3>Hassle Free Returns</h3>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
+<!-- BEST SELLERS – PRODUCT SECTION -->
+<div class="product-section-container">
+  <h1>Best Sellers</h1>
+  <span class="product-section-description">
+                Lectus sapien auctor tortor quis pharetra ligula sapien eu augue. Praesent bibendum sapien ut
+                est venenatis semper.
+            </span>
+  <ul class="product-section-items-wrapper">
+    <li class="product-item">
+      <div class="product-image">
+        <img src="images/collection/watch.png" alt="Torquoise SmartWatch">
+      </div>
+      <div class="product-text">
+                        <span class="product-title">
+                            Turquoise Light Blue<br>
+                            Single Wool Smartwatch
+                        </span>
+        <div class="product-purchase">
+                            <span class="product-price">
+                                $300.00
+                            </span>
+          <button class="blue-button add-to-cart">
+            Add To Cart
+          </button>
         </div>
       </div>
-
-      <div class="col-lg-5">
-        <div class="img-wrap">
-          <img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+    </li>
+    <li class="product-item">
+      <div class="product-image">
+        <img src="images/collection/ipad.png" alt="Torquoise SmartWatch">
+      </div>
+      <div class="product-text">
+                        <span class="product-title">
+                            Sunshine Yellow Bright Curve-Edged Tablet
+                        </span>
+        <div class="product-purchase">
+                            <span class="product-price">
+                                $200.00
+                            </span>
+          <button class="blue-button add-to-cart">
+            Add To Cart
+          </button>
         </div>
       </div>
+    </li>
+    <li class="product-item">
+      <div class="product-image">
+        <img src="images/collection/headphone.png" alt="Sunshine Yellow Bright">
+      </div>
+      <div class="product-text">
+                        <span class="product-title">
+                            Candyfloss Pink Two-Earpiece Headphone
+                        </span>
+        <div class="product-purchase">
+                            <span class="product-price">
+                                $500.00
+                            </span>
+          <button class="blue-button add-to-cart">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div> <!-- END OF BEST SELLERS - PRODUCT SECTION -->
 
+<!-- IPAD PROMO -->
+<div class="promo-container">
+  <div class="promo-box">
+    <div class="promo-image">
+      <img src="images/collection/ipad.png" alt="Candyfloss Pink Two-Earpiece Headphone">
     </div>
-  </div>
-</div>
-<!-- End Why Choose Us Section -->
-
-<!-- Start We Help Section -->
-<div class="we-help-section">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <div class="imgs-grid">
-          <div class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
-          <div class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
-          <div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
-        </div>
-      </div>
-      <div class="col-lg-5 ps-lg-5">
-        <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-
-        <ul class="list-unstyled custom-list my-4">
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-          <li>Donec vitae odio quis nisl dapibus malesuada</li>
-        </ul>
-        <p><a herf="#" class="btn">Explore</a></p>
+    <div class="promo-content">
+      <h1>New Arrivals</h1>
+      <h2>Sunshine Ipad</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Curabitur tristique quam eget eros convallis,
+        sit amet pellentesque.
+      </p>
+      <div>
+        <button class="white-button">
+          SHOP NOW
+        </button>
       </div>
     </div>
   </div>
-</div>
-<!-- End We Help Section -->
+</div> <!-- END OF IPAD PROMO -->
 
-<!-- Start Popular Product -->
-<div class="popular-product">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="images/product-1.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="pt-3">
-            <h3>Nordic Chair</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
+</body>
+<footer>
+  <div id="footer-top">
+    <img src="images/eLife.png" alt="eLife Logo" width="220px" height="110px">
+    <div id="footer-socials-wrapper">
+      <div class="footer-social">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+        </svg>
+        <span>012 345 6789</span>
       </div>
-
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="images/product-2.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="pt-3">
-            <h3>Kruzo Aero Chair</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
+      <div class="footer-social">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+        </svg>
+        <span>Telegram</span>
       </div>
-
-      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-        <div class="product-item-sm d-flex">
-          <div class="thumbnail">
-            <img src="images/product-3.png" alt="Image" class="img-fluid">
-          </div>
-          <div class="pt-3">
-            <h3>Ergonomic Chair</h3>
-            <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-            <p><a href="#">Read More</a></p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- End Popular Product -->
-
-<!-- Start Testimonial Slider -->
-<div class="testimonial-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 mx-auto text-center">
-        <h2 class="section-title">Testimonials</h2>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <div class="testimonial-slider-wrap text-center">
-
-          <div id="testimonial-nav">
-            <span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-            <span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-          </div>
-
-          <div class="testimonial-slider">
-
-            <div class="item">
-              <div class="row justify-content-center">
-                <div class="col-lg-8 mx-auto">
-
-                  <div class="testimonial-block text-center">
-                    <blockquote class="mb-5">
-                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                    </blockquote>
-
-                    <div class="author-info">
-                      <div class="author-pic">
-                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                      </div>
-                      <h3 class="font-weight-bold">Maria Jones</h3>
-                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- END item -->
-
-            <div class="item">
-              <div class="row justify-content-center">
-                <div class="col-lg-8 mx-auto">
-
-                  <div class="testimonial-block text-center">
-                    <blockquote class="mb-5">
-                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                    </blockquote>
-
-                    <div class="author-info">
-                      <div class="author-pic">
-                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                      </div>
-                      <h3 class="font-weight-bold">Maria Jones</h3>
-                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- END item -->
-
-            <div class="item">
-              <div class="row justify-content-center">
-                <div class="col-lg-8 mx-auto">
-
-                  <div class="testimonial-block text-center">
-                    <blockquote class="mb-5">
-                      <p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-                    </blockquote>
-
-                    <div class="author-info">
-                      <div class="author-pic">
-                        <img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-                      </div>
-                      <h3 class="font-weight-bold">Maria Jones</h3>
-                      <span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- END item -->
-
-          </div>
-
-        </div>
+      <div class="footer-social">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+        </svg>
+        <span>Twitter</span>
       </div>
     </div>
   </div>
-</div>
-<!-- End Testimonial Slider -->
-
-<!-- Start Blog Section -->
-<div class="blog-section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h2 class="section-title">Recent Blog</h2>
-      </div>
-      <div class="col-md-6 text-start text-md-end">
-        <a href="#" class="more">View All Posts</a>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-        <div class="post-entry">
-          <a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
-          <div class="post-content-entry">
-            <h3><a href="#">First Time Home Owner Ideas</a></h3>
-            <div class="meta">
-              <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-        <div class="post-entry">
-          <a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
-          <div class="post-content-entry">
-            <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-            <div class="meta">
-              <span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-        <div class="post-entry">
-          <a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
-          <div class="post-content-entry">
-            <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-            <div class="meta">
-              <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- End Blog Section -->
-
-<!-- Start Footer Section -->
-<footer class="footer-section">
-  <div class="container relative">
-
-    <div class="sofa-img">
-      <img src="images/sofa.png" alt="Image" class="img-fluid">
-    </div>
-
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="subscription-form">
-          <h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
-
-          <form action="#" class="row g-3">
-            <div class="col-auto">
-              <input type="text" class="form-control" placeholder="Enter your name">
-            </div>
-            <div class="col-auto">
-              <input type="email" class="form-control" placeholder="Enter your email">
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-primary">
-                <span class="fa fa-paper-plane"></span>
-              </button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="row g-5 mb-5">
-      <div class="col-lg-4">
-        <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-        <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
-
-        <ul class="list-unstyled custom-social">
-          <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-          <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-8">
-        <div class="row links-wrap">
-          <div class="col-6 col-sm-6 col-md-3">
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-sm-6 col-md-3">
-            <ul class="list-unstyled">
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Knowledge base</a></li>
-              <li><a href="#">Live chat</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-sm-6 col-md-3">
-            <ul class="list-unstyled">
-              <li><a href="#">Jobs</a></li>
-              <li><a href="#">Our team</a></li>
-              <li><a href="#">Leadership</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6 col-sm-6 col-md-3">
-            <ul class="list-unstyled">
-              <li><a href="#">Nordic Chair</a></li>
-              <li><a href="#">Kruzo Aero</a></li>
-              <li><a href="#">Ergonomic Chair</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="border-top copyright">
-      <div class="row pt-4">
-        <div class="col-lg-6">
-          <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-          </p>
-        </div>
-
-        <div class="col-lg-6 text-center text-lg-end">
-          <ul class="list-unstyled d-inline-flex ms-auto">
-            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
+  <div id="footer-bottom">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="#">Products</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+    </ul>
+    <p>
+      Copyright © 2024 eLife. All rights reserved.
+    </p>
   </div>
 </footer>
-<!-- End Footer Section -->
-
-
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/tiny-slider.js"></script>
-<script src="js/custom.js"></script>
 </body>
 </html>
