@@ -11,11 +11,15 @@ import java.util.List;
 
 public class OrderDAOImpl implements OrderDAO {
     @Override
-    public void save(Order order) {
+    public boolean save(Order order) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(order);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 

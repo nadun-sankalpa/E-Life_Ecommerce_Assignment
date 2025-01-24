@@ -6,7 +6,7 @@ import lk.ijse.nrshopping.Entity.User;
 import java.util.List;
 
 public interface UserDAO extends CrudDAO<User,String> {
-    public void save(User user);
+    public boolean save(User user);
     public void update(User user);
 
     public void delete(String id);

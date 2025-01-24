@@ -15,11 +15,15 @@ public class CartDAOImpl implements CartDAO {
     }
 
     @Override
-    public void save(Cart cart) {
+    public boolean save(Cart cart) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(cart);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
 
     }

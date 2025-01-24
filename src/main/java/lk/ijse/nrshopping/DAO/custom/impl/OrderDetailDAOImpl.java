@@ -26,11 +26,15 @@ public class OrderDetailDAOImpl implements OrderDetailDAO {
     }
 
     @Override
-    public void save(OrderDetail orderDetail) {
+    public boolean save(OrderDetail orderDetail) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(orderDetail);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 

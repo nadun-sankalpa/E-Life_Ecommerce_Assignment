@@ -6,7 +6,7 @@ import lk.ijse.nrshopping.Entity.Product;
 import java.util.List;
 
 public interface ProductDAO extends CrudDAO<Product,String> {
-    void save(Product product);
+    boolean save(Product product);
 
     Product findById(String id);
 

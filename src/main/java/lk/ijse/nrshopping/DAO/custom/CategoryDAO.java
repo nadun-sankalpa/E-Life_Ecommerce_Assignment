@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CategoryDAO extends CrudDAO<Category, String> {
     // Create a new category
-    void save(Category category);
+    boolean save(Category category);
 
     // Retrieve a category by its ID
     Category findById(String id);

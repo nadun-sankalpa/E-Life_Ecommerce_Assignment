@@ -11,11 +11,15 @@ import java.util.List;
 
 public class ProductDAOImpl implements ProductDAO {
     @Override
-    public void save(Product product) {
+    public boolean save(Product product) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.persist(product);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 

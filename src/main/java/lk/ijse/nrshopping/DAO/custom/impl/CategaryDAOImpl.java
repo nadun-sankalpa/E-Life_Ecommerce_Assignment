@@ -11,11 +11,15 @@ import java.util.List;
 
 public class CategaryDAOImpl implements CategoryDAO {
     @Override
-    public void save(Category category) {
+    public boolean save(Category category) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
             session.persist(category);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 

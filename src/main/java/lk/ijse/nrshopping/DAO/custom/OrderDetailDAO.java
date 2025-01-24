@@ -6,7 +6,7 @@ import lk.ijse.nrshopping.Entity.OrderDetail;
 import java.util.List;
 
 public interface OrderDetailDAO extends CrudDAO<OrderDetail, String> {
-    void save(OrderDetail orderDetail);
+    boolean save(OrderDetail orderDetail);
 
     List<OrderDetail> findByOrderId(String orderId);
 
