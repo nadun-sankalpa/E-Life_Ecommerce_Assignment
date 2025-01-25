@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lk.ijse.nrshopping.BO.BOFactory;
-import lk.ijse.nrshopping.BO.custom.UserSaveBO;
+import lk.ijse.nrshopping.BO.custom.UserBO;
 import lk.ijse.nrshopping.Entity.User;
 
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.time.LocalDate;
 
 @WebServlet(name = "UserRegistrationServlet", value = "/user-registration-servlet")
 public class UserRegistrationSevlet extends HttpServlet {
-    UserSaveBO userSaveBO = (UserSaveBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.SAVE_USER);
+    UserBO userSaveBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.USER);
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String firstName = req.getParameter("firstName");

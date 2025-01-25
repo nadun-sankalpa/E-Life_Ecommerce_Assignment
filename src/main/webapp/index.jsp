@@ -43,7 +43,7 @@
           <a href="Checkout.jsp">Checkout</a>
         </li>
         <li>
-          <a href="User.jsp">User</a>
+          <a href="Login.jsp">User</a>
         </li>
       </ul>
       <button class="blue-button">

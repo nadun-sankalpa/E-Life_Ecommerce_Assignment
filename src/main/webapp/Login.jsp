@@ -14,13 +14,16 @@
   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
+
+<%String error = (String) session.getAttribute("error");%>
+
 <img class="wave" src="images/wave.png">
 <div class="container">
   <div class="img">
     <img src="images/bg.svg">
   </div>
-  <div class="login-content">
-    <form action="Login.jsp">
+  <div class="login-content" >
+    <form action="login-servlet" method="post">
       <img src="images/avatar.svg">
       <h2 class="title">Welcome</h2>
       <div class="input-div one">
@@ -29,7 +32,7 @@
         </div>
         <div class="div">
           <h5>Username</h5>
-          <input type="text" class="input">
+          <input type="text" id="username" name="Username" class="input">
         </div>
       </div>
       <div class="input-div pass">
@@ -38,14 +41,28 @@
         </div>
         <div class="div">
           <h5>Password</h5>
-          <input type="password" class="input">
+          <input type="password" id="password" name="Password" class="input">
         </div>
       </div>
       <input type="submit" class="btn" value="Login">
-      <a href="#">Don't have an account?</a>
+      <a href="Register.jsp">Don't have an account?</a>
     </form>
   </div>
+
+  <% if (error != null) { %>
+  <!-- Alert for invalid credentials -->
+  <div class="alert alert-danger alert-dismissible fade show position-absolute top-50 start-50 translate-middle text-center w-25" style="z-index: 2; " role="alert">
+    <strong>Invalid Credentials!</strong><br> <%= error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <% session.removeAttribute("error"); %>
+  <% } %>
+
 </div>
+
+
+</div>
+
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
