@@ -46,23 +46,29 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public void update(Order order) {
+    public boolean update(Order order) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.merge(order);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             Order order = session.get(Order.class, id);
             if (order != null) {
                 session.remove(order);
+                return true;
             }
             transaction.commit();
+            return false;
         }
     }
 

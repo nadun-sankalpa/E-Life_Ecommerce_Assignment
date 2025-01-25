@@ -47,23 +47,29 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public void update(Product product) {
+    public boolean update(Product product) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.merge(product);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             Product product = session.get(Product.class, id);
             if (product != null) {
                 session.remove(product);
+                return true;
             }
             transaction.commit();
+            return false;
         }
     }
 

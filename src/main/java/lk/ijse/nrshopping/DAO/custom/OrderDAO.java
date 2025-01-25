@@ -12,9 +12,9 @@ public interface OrderDAO extends CrudDAO<Order,String> {
 
     List<Order> getAll();
 
-    void update(Order order);
+   boolean update(Order order);
 
-    void delete(String id);
+    boolean delete(String id);
 
     List<Order> findByCustomer(String customerId);
 }

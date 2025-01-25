@@ -40,23 +40,29 @@ public class CartDAOImpl implements CartDAO {
     }
 
     @Override
-    public void update(Cart cart) {
+    public boolean update(Cart cart) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             session.merge(cart);
             transaction.commit();
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             Cart cart = session.get(Cart.class, id);
             if (cart != null) {
                 session.remove(cart);
+                return true;
             }
             transaction.commit();
+            return false;
         }
     }
 }

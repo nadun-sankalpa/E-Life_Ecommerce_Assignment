@@ -38,38 +38,61 @@ public class CategaryDAOImpl implements CategoryDAO {
 
     @Override
     public List<Category> getAll() {
-        try (Session session = SessionFactoryConfig.getInstance().getSession()){
-            Query<Category> query = session.createQuery("FROM Category ",Category.class);
-            return query.list();
-        } catch (Exception e){
-            e.printStackTrace();
-            return null;
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            Transaction transaction = session.beginTransaction();
+            List<Category> categoryList = session.createSelectionQuery("from Category ", Category.class).list();
+            if (categoryList == null || categoryList.isEmpty()) {
+                System.out.println("No categories found in the database.");
+            } else {
+                System.out.println("Fetched categories: " + categoryList.size());
+            }
+            transaction.commit();
+            return categoryList;
+        } catch (Exception e) {
+            System.err.println("Error retrieving categories: " + e.getMessage());
+            // Consider re-throwing the exception or returning a specific error code
+            // to indicate the failure to the calling code.
+            throw e; // Or return null or a specific error code
         }
     }
 
+
+
+
     @Override
-    public void update(Category category) {
+    public boolean update(Category category) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
             session.merge(category);
             transaction.commit();
-
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
 
     }
 
     @Override
-    public void delete(String id) {
-        try (Session session = SessionFactoryConfig.getInstance().getSession()){
+    public boolean delete(String id) {
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
-            Category category = session.get(Category.class,id);
-            if (category != null){
-                session.remove(category);
+            Category category = session.get(Category.class, id);
+            if (category != null) {
+                session.remove(category); // Remove the category
+                transaction.commit();    // Commit the transaction
+                return true;
             }
-            transaction.commit();
+            transaction.rollback();      // Rollback if the category doesn't exist
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();         // Log the exception
+            return false;
         }
-
     }
+
+
+
 
     @Override
     public Category findByName(String name) {

@@ -1,5 +1,6 @@
 package lk.ijse.nrshopping.BO;
 
+import lk.ijse.nrshopping.BO.custom.impl.CategoryBOImpl;
 import lk.ijse.nrshopping.BO.custom.impl.UserBOImpl;
 
 public class BOFactory {
@@ -15,6 +16,8 @@ public class BOFactory {
         switch (types){
             case USER:
                 return new UserBOImpl();
+            case CATEGORY:
+                return new CategoryBOImpl();
             default:
                 return null;
         }

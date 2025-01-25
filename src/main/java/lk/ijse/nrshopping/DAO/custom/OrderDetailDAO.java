@@ -10,5 +10,5 @@ public interface OrderDetailDAO extends CrudDAO<OrderDetail, String> {
 
     List<OrderDetail> findByOrderId(String orderId);
 
-    void delete(String id);
+   boolean delete(String id);
 }

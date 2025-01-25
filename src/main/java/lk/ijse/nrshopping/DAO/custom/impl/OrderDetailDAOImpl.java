@@ -11,8 +11,8 @@ import java.util.List;
 
 public class OrderDetailDAOImpl implements OrderDetailDAO {
     @Override
-    public void update(OrderDetail entity) {
-
+    public boolean update(OrderDetail entity) {
+        return false;
     }
 
     @Override
@@ -52,14 +52,16 @@ public class OrderDetailDAOImpl implements OrderDetailDAO {
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()) {
             Transaction transaction = session.beginTransaction();
             OrderDetail orderDetail = session.get(OrderDetail.class, id);
             if (orderDetail != null) {
                 session.remove(orderDetail);
+                return true;
             }
             transaction.commit();
+            return false;
         }
     }
 }

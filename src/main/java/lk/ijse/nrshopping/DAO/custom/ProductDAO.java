@@ -12,9 +12,9 @@ public interface ProductDAO extends CrudDAO<Product,String> {
 
     List<Product> getAll();
 
-    void update(Product product);
+    boolean update(Product product);
 
-    void delete(String id);
+    boolean delete(String id);
 
     List<Product> findByName(String name);
 

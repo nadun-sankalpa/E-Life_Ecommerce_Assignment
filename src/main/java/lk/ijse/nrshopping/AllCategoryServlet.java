@@ -23,10 +23,10 @@ public class AllCategoryServlet extends HttpServlet {
         List<Category> categoryList = categoryBO.getAll();
         if (categoryList != null && !categoryList.isEmpty()) {
             req.setAttribute("categoryList", categoryList);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/pages/adminCategoryManagement.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("AdminCateogary.jsp");
             requestDispatcher.forward(req, resp);
         } else {
-            resp.sendRedirect("/pages/adminCategoryManagement.jsp?allListFailed=No categories found.");
+            resp.sendRedirect("AdminCateogary.jsp?allListFailed=No categories found.");
         }
     }
 }

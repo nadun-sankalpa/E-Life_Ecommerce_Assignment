@@ -26,24 +26,30 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void update(User user) {
+    public boolean update(User user) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
             session.merge(user);
             transaction.commit();
 
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
         }
     }
 
     @Override
-    public void delete(String id) {
+    public boolean delete(String id) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Transaction transaction = session.beginTransaction();
             User user = session.get(User.class,id);
             if (user != null){
                 session.remove(user);
+                return true;
             }
             transaction.commit();
+            return false;
         }
     }
 
@@ -72,7 +78,7 @@ public class UserDAOImpl implements UserDAO {
     public User findByUserName(String userName) {
         try (Session session = SessionFactoryConfig.getInstance().getSession()){
             Query<User> query = session.createQuery("from User where username = :username", User.class);
-            query.setParameter("username", userName);
+            query.setParameter("username",userName);
             return query.uniqueResult();
         }
     }
