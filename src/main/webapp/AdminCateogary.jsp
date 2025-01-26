@@ -1,11 +1,5 @@
 <%@ page import="lk.ijse.nrshopping.Entity.Category" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: nadun
-  Date: 1/22/2025
-  Time: 8:47 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,8 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<% String saveSuccessful = request.getParameter("saveSuccess");%>
-<% String saveFail = request.getParameter("saveFail");%>
+<%
+    String saveSuccessful = request.getParameter("saveSuccess");
+    String saveFail = request.getParameter("saveFail");
+%>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;" data-bs-theme="dark">
@@ -29,7 +25,7 @@
                     <a class="nav-link active" aria-current="page" href="AdminDashboard.jsp">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="AdminCateogary.jsp">Cateogaries</a>
+                    <a class="nav-link" href="AdminCategory.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="AdminOrders.jsp">Orders</a>
@@ -48,7 +44,6 @@
         </div>
     </div>
 </nav>
-
 
 <!-- Content -->
 <div class="container mt-5">
@@ -244,9 +239,7 @@
         document.getElementById('deleteCategoryDescription').value = categoryDescription;
     }
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 </html>
