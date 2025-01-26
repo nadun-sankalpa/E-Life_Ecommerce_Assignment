@@ -15,4 +15,6 @@ public interface UserDAO extends CrudDAO<User,String> {
     public List<User> getAll();
 
     User findByUserName(String userName);
+
+    boolean updateStatus(String id,boolean status);
 }

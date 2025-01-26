@@ -82,4 +82,30 @@ public class UserDAOImpl implements UserDAO {
             return query.uniqueResult();
         }
     }
+
+    @Override
+    public boolean updateStatus(String id, boolean status) {
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            // Log the incoming userId and status
+            System.out.println("Attempting to update user with ID: " + id + " to status: " + status);
+
+            User user = session.get(User.class, id);
+            if (user != null) {
+                user.setActive(status);
+                session.merge(user);
+                transaction.commit();
+                System.out.println("User status updated successfully.");
+                return true;
+            } else {
+                System.out.println("User with ID " + id + " not found.");
+                transaction.rollback();
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
