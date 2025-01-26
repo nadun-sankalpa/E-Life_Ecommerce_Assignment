@@ -29,7 +29,7 @@ public class UserRegistrationSevlet extends HttpServlet {
         boolean isActive = true;
 
         if (!password.equals(confirmPassword)){
-            resp.sendRedirect("register.jsp?passwordMisMatch=Password Does not Match!");
+            resp.sendRedirect("Register.jsp?passwordMisMatch=Password Does not Match!");
         }
         User user = new User();
         user.setName(firstName+" "+lastName);
@@ -41,7 +41,7 @@ public class UserRegistrationSevlet extends HttpServlet {
         user.setAddress(address);
         user.setDob(LocalDate.parse(dob));
 
-        boolean isSaved = userSaveBO.savUser(user);
+        boolean isSaved = userSaveBO.saveUser(user);
         if (isSaved){
             resp.sendRedirect("Register.jsp?saveSuccess=User Saved Success Fully!");
         }
